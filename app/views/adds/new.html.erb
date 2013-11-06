@@ -1,0 +1,17 @@
+<h1>Add New</h1>
+
+<%= form_for @add do |f| %>
+	<p>2 num</p>
+	1番目<%= f.text_field :num1 %><br />
+	2番目<%= f.text_field :num2 %><br />
+	<% if @add.errors.any? %>
+		<% if !(@add.errors.messages[:num1].empty?) %>
+			<p>1番目の数値を正しく入力してください。</p>
+		<% end %>
+		<% if !(@add.errors.messages[:num2].empty?) %>
+			<p>２番目の数値を正しく入力してください。</p>
+		<% end %>
+	<% end %>
+
+	<%= f.submit %>
+<% end %>

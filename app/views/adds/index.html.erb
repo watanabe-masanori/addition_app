@@ -1,0 +1,10 @@
+<h1></h1>
+	<% @add.each do |a| %>
+	<li>
+		<%= link_to "Num1=" + a.num1.to_s, add_path(a.id) %>
+		<%= link_to "Num2=" + a.num2.to_s, add_path(a.id) %>
+		<%= link_to "[Calc]", add_path(a.id) %>
+	</li>
+	<% end %>
+	<p><%= link_to "New", new_add_path %></p>
+<p>test</p>
